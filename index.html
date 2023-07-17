@@ -1,24 +1,59 @@
-<h1> Öresund runt 2023 </h1>
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8">
+    <title>Öresund runt 2023</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=roboto+condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+  <section class="container">
+    <div class="content-header">
+      <h1> Öresund runt 2023 </h1>
+    </div>
 
-<h2>Starttid</h2>
-<p>Kl. 12</p>
+    <div class="content-timer">
+      <h2>Starttid</h2>
+      <p>22:de juli 2023 kl. 12</p>
+      <p id="content-timer-left"></p>
+      <script>
+        setInterval(function() {
+          const start = Date.parse("2023-07-22T12:00:00");
+          const now = Date.now();
+          const timeLeft = start - now;
+          const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
+          const minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
+          const seconds = Math.floor((timeLeft / 1000) % 60);
+          document.getElementById("content-timer-left").innerHTML = days + " dagar " + hours + " timmar " + minutes + " minuter " + seconds + " sekunder kvar";
+        }, 1000);
+      </script>
+    </div>
 
-<h2>Destinationer</h2>
-<ol>
-  <li>Malmö (Charels Nordström)</li>
-  <li>Landskrona (Daniel)</li>
-  <li>Helsingborg (Sofia) </li>
-  <li>Båt x3 </li>
-  <li>Helsingör (Jonathan) </li>
-  <li>Klampenborg (Henrik)</li>
-  <li> Köpenhamn (Simon)</li>
-</ol>
-
-<h2> Att göra innan 22:de juli 2023 </h2> 
-<ol>
-  <li> Hitta på en aktivitet i din stad. Vi äter lunch i Malmö. </li>
-  <li> Köp öresund runt billjett (Fia fixar). </li>
-  <li> Packa regnkläder. </li>
-  <li> ID-kort annars tar aina daj. </li>
-</ol>
+    <div class="content-main-start">
+      <h2>Destinationer</h2>
+      <ol>
+        <li>Malmö (Charels Nordström)</li>
+        <li>Landskrona (Daniel)</li>
+        <li>Helsingborg (Sofia) </li>
+        <li>Båt x3 </li>
+        <li>Helsingör (Jonathan) </li>
+        <li>Klampenborg (Henrik)</li>
+        <li> Köpenhamn (Simon)</li>
+      </ol>
+    </div>
+    <div class="content-main-end">
+      <h2> Att göra innan 22:de juli 2023 </h2>
+      <ol>
+        <li> Hitta på en aktivitet i din stad. Vi äter lunch i Malmö. </li>
+        <li> Köp öresund runt billjett (Fia fixar). </li>
+        <li> Packa regnkläder. </li>
+        <li> ID-kort annars tar aina daj. </li>
+      </ol>
+    </div>
+  </section>
+  </body>
+</html>
 

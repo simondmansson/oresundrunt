@@ -1,0 +1,45 @@
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+}
+
+.container {
+  display: grid;
+  row-gap: 1rem;
+  column-gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "header header header header"
+  "timer timer timer timer"
+  "main-start main-start main-end main-end";
+}
+
+.content-header {
+  grid-area: header;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+}
+
+.content-timer {
+  grid-area: timer;
+  padding: 1rem;
+}
+
+.content-main-start {
+  grid-area: main-start;
+  padding: 1rem;
+}
+
+.content-main {
+  grid-area: main;
+  padding: 1rem;
+}
+.content-main-end {
+  grid-area: main-end;
+  padding: 1rem;
+}
